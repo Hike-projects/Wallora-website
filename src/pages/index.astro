@@ -1,29 +1,32 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>Wallora Wallpapers</h1>
-			<p>We are currently under maintenance. Please check back soon!</p>
-			<h2>App Status</h2>
-			<p>The Wallora Wallpapers app is under maintenance. We appreciate your patience.</p>
-			<h2>Download the App</h2>
-			<p>
-				<a href="your-app-download-link" class="button">Download Wallora Wallpapers</a>
-			</p>
-			<h2>App Version</h2>
-			<p>Current version: <strong>1.0.0</strong></p>
-		</main>
-		<Footer />
-	</body>
+import BaseHead from '../components/BaseHead.astro'; import Header from '../components/Header.astro'; import Footer from '../components/Footer.astro'; import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <Header />
+  <div class="dashboard">
+    <div class="card">
+      <div class="status">
+        <span class="status-dot yellow"></span>
+        <p>Maintenance</p>
+      </div>
+      <div class="logo">
+        <img src="/logo.png" alt="Wallora Logo" class="logo-img">
+      </div>
+      <div class="info">
+        <h1>Wallora</h1>
+        <p class="description">Wallora Wallpapers</p>
+        <p class="version">Version: 2.0.0</p>
+        <button class="download-btn">Download</button>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</body>
 </html>
