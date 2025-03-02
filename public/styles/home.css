@@ -4,25 +4,25 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px; /* Slight padding from the screen edges */
+  padding: 16px; /* Adjust padding for responsive design */
 }
 
 .dashboard-card {
   background-color: #fff; /* White card background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for better depth */
   border-radius: 25px; /* Rounded corners */
-  padding: 30px;
-  max-width: 340px; /* Decreased maximum width */
+  padding: 24px; /* Spacing inside the card */
+  max-width: 360px; /* Slightly wider maximum width */
   text-align: center;
-  width: 90%; /* Dynamic width that adjusts to screen size */
-  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  width: 90%; /* Allows the card to be responsive and fit small screens */
+  margin-top: 20px; /* Adds spacing from the header */
 }
 
 .dashboard-status {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .dashboard-status-dot {
@@ -34,13 +34,12 @@
   animation: pulse 1.5s infinite; /* Add the pulsing animation */
 }
 
-/* Status Colors */
 .dashboard-status-dot.yellow {
   background-color: #FFC107;
   box-shadow: 0 0 10px #FFC107;
 }
 
-/* Keyframes for the animated pulsing effect */
+/* Keyframes for the pulsing animated yellow dot */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 5px #FFC107;
@@ -57,12 +56,12 @@
 }
 
 .dashboard-logo-img {
-  width: 80px; /* Adjust the logo size to fit the smaller card */
+  width: 100px; /* Adjust logo size */
   margin-bottom: 20px;
 }
 
 .dashboard-title {
-  font-size: 1.8rem; /* Slightly smaller title to fit the reduced width */
+  font-size: 1.8rem; /* Adjust title font size */
   margin-bottom: 10px;
   color: #333;
 }
@@ -70,7 +69,7 @@
 .dashboard-description {
   font-size: 1rem;
   color: #777;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .dashboard-version {
@@ -82,14 +81,22 @@
 .dashboard-download-btn {
   background-color: #4CAF50;
   color: #fff;
-  padding: 8px 18px; /* Slightly smaller button padding */
+  padding: 8px 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.9rem; /* Adjust font size to match smaller proportions */
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .dashboard-download-btn:hover {
   background-color: #45a049;
+}
+
+/* Adds transition for responsive tweaks */
+@media (min-width: 768px) {
+  .dashboard-card {
+    max-width: 400px; /* Wider card for larger screens */
+    margin-top: 40px; /* Increase top margin for better spacing */
+  }
 }
