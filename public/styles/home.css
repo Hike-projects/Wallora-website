@@ -4,25 +4,26 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px; /* Adjust padding for responsive design */
+  padding: 16px; /* Adjust spacing for a consistent layout */
 }
 
 .dashboard-card {
   background-color: #fff; /* White card background */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for better depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 25px; /* Rounded corners */
-  padding: 24px; /* Spacing inside the card */
-  max-width: 360px; /* Slightly wider maximum width */
+  padding: 20px; /* Internal card padding */
+  max-width: 320px; /* Reduce maximum width for a compact look */
   text-align: center;
-  width: 90%; /* Allows the card to be responsive and fit small screens */
-  margin-top: 20px; /* Adds spacing from the header */
+  width: 90%; /* Make the width responsive for small screens */
+  margin-top: 20px; /* Add spacing between the card and the header */
+  box-sizing: border-box; /* Ensure padding doesn’t affect width */
 }
 
 .dashboard-status {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
+  margin-bottom: 12px; /* Adjust spacing below the status */
 }
 
 .dashboard-status-dot {
@@ -56,36 +57,36 @@
 }
 
 .dashboard-logo-img {
-  width: 100px; /* Adjust logo size */
-  margin-bottom: 20px;
+  width: 80px; /* Scale down the logo size */
+  margin-bottom: 16px;
 }
 
 .dashboard-title {
-  font-size: 1.8rem; /* Adjust title font size */
-  margin-bottom: 10px;
+  font-size: 1.6rem; /* Adjust font size for the title */
+  margin-bottom: 8px;
   color: #333;
 }
 
 .dashboard-description {
-  font-size: 1rem;
+  font-size: 0.95rem; /* Adjust font size for the description */
   color: #777;
   margin-bottom: 8px;
 }
 
 .dashboard-version {
-  font-size: 0.9rem;
+  font-size: 0.85rem; /* Resize version text */
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .dashboard-download-btn {
   background-color: #4CAF50;
   color: #fff;
-  padding: 8px 18px;
+  padding: 8px 16px; /* Reduce padding for a smaller button */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
 
@@ -93,10 +94,10 @@
   background-color: #45a049;
 }
 
-/* Adds transition for responsive tweaks */
+/* Media Query for Larger Screens */
 @media (min-width: 768px) {
   .dashboard-card {
-    max-width: 400px; /* Wider card for larger screens */
-    margin-top: 40px; /* Increase top margin for better spacing */
+    max-width: 300px; /* Make the card very compact even on larger screens */
+    margin-top: 40px; /* Add more top margin for desktop view */
   }
 }
