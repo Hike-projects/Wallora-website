@@ -1,36 +1,58 @@
+/* Glassmorphism Design */
 header {
     margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.4); /* Translucent white */
+    backdrop-filter: blur(10px); /* Adds the blur effect for glassmorphism */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    border-radius: 12px; /* Rounded corners for a softer look */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for realism */
 }
+
+/* Adjusting title styles */
 h2 {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.2em;
+    color: var(--black); /* Ensure text remains readable */
 }
-h2 a,
-h2 a.active {
+h2 a {
     text-decoration: none;
+    font-weight: bold; /* Slightly bold for emphasis */
+    color: var(--black);
 }
+
+/* Navigation links: Updated styling (no underline, cleaner look) */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 nav a {
     padding: 1em 0.5em;
     color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
+    text-decoration: none; /* Removes underline */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover animation */
 }
-nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
+
+nav a:hover {
+    color: var(--accent); /* Change color on hover to provide feedback */
+    transform: scale(1.1); /* Slight scaling effect on hover */
 }
+
 .social-links,
 .social-links a {
     display: flex;
+    color: var(--accent);
+    transition: transform 0.3s ease;
 }
+
+.social-links a:hover {
+    transform: scale(1.1); /* Add hover interaction for social icons */
+}
+
+/* Responsive design: hide social links on smaller screens */
 @media (max-width: 720px) {
     .social-links {
         display: none;
