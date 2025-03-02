@@ -1,10 +1,20 @@
+/* Root container ensures no overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
 /* Scopes all styles under the .dashboard class */
 .dashboard {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px; /* Adjust spacing for a consistent layout */
+  padding: 16px; /* Adjust padding for consistent spacing */
+  margin: 0; /* Removes any unexpected outer margins */
+  box-sizing: border-box; /* Ensures padding is included in calculated width */
 }
 
 .dashboard-card {
@@ -12,11 +22,11 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border-radius: 25px; /* Rounded corners */
   padding: 20px; /* Internal card padding */
-  max-width: 320px; /* Reduce maximum width for a compact look */
+  max-width: 320px; /* Compact width for the card */
   text-align: center;
-  width: 90%; /* Make the width responsive for small screens */
-  margin-top: 20px; /* Add spacing between the card and the header */
-  box-sizing: border-box; /* Ensure padding doesn’t affect width */
+  width: 100%; /* Prevents the card from exceeding container width */
+  box-sizing: border-box; /* Includes padding in width calculation */
+  margin-top: 20px; /* Adds spacing between the card and the header */
 }
 
 .dashboard-status {
