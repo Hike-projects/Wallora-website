@@ -1,28 +1,21 @@
-/* Scopes all styles under the .dashboard-container class */
-.dashboard-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh; /* Ensures it centers the content vertically */
-  background-color: #f4f4f4; /* Optional, for better visual isolation */
-}
-
+/* Scopes all styles under the .dashboard class */
 .dashboard {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 20px; /* Creates spacing between the card and the sides of the screen */
+  padding: 20px; /* Adds padding to give a clean appearance between the screen edges */
 }
 
 .dashboard-card {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  background-color: #fff; /* Ensures the card is white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+  border-radius: 25px; /* Smooth, rounded corners */
   padding: 30px;
   max-width: 400px;
   text-align: center;
-  width: 90%;
+  width: calc(100% - 40px); /* Ensures the card doesn't hug the screen edges */
 }
 
 .dashboard-status {
@@ -36,14 +29,31 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  display: inline-block;
   margin-right: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  animation: pulse 1.5s infinite; /* Adds an animated "pulsing" effect */
 }
 
+/* Status Colors */
 .dashboard-status-dot.yellow {
   background-color: #FFC107;
   box-shadow: 0 0 10px #FFC107;
+}
+
+/* Keyframes for the animated pulsing effect */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #FFC107;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 15px #FFC107;
+    transform: scale(1.1);
+  }
+  100% {
+    box-shadow: 0 0 5px #FFC107;
+    transform: scale(1);
+  }
 }
 
 .dashboard-logo-img {
