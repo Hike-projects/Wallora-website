@@ -4,18 +4,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 20px; /* Creates spacing between the card and the sides of the screen */
-  padding: 20px; /* Adds padding to give a clean appearance between the screen edges */
+  padding: 20px; /* Slight padding from the screen edges */
 }
 
 .dashboard-card {
-  background-color: #fff; /* Ensures the card is white */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
-  border-radius: 25px; /* Smooth, rounded corners */
-  padding: 30px;
+  background-color: #fff; /* White card background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+  border-radius: 25px; /* Rounded corners */
   max-width: 400px;
   text-align: center;
-  width: calc(100% - 40px); /* Ensures the card doesn't hug the screen edges */
+  width: calc(100% - 32px); /* Ensures it stays responsive with minimal side padding */
 }
 
 .dashboard-status {
@@ -31,7 +29,7 @@
   border-radius: 50%;
   margin-right: 8px;
   display: inline-block;
-  animation: pulse 1.5s infinite; /* Adds an animated "pulsing" effect */
+  animation: pulse 1.5s infinite; /* Add the pulsing animation */
 }
 
 /* Status Colors */
